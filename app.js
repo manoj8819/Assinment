@@ -42,13 +42,13 @@ myApp.config(function ($routeProvider, $locationProvider) {
     // create a message to display in our view
     $scope.message = "(',')---I am on Home page---(',')";
            $scope.student = [
-    { id: 1, 'sname': 'Abhishek', 'email': 'Pabba', 'dob':'4-5-7','nationality': 'Indian','pname': 'Rajendra'}
+    { id: 1, 'sname': 'Manoj Kumar', 'email': 'dmanoj.9771@gmail.com', 'dob':'05-09-1988','nationality': 'Indian','pname': 'Rajendra'}
    
   ];
   
   $scope.errorMessage = false;
   
-  $scope.addRow = function () {
+  $scope.addStudent = function () {
     var maxID = (Math.max.apply(null, $scope.student.map(x => x.id)) || 0) + 1;
     
     if(!!$scope.student.find(x => x.sname === $scope.selectedStudent.sname && x.nationality === $scope.selectedStudent.nationality)) {
@@ -78,7 +78,7 @@ myApp.config(function ($routeProvider, $locationProvider) {
   }
   $scope.singleStudentSelected = false;
   
-  $scope.setSelectedStudent = function (employee){
+  $scope.setSelectedStudent = function (s){
     if($scope.student.filter(x => x.selected).length > 1){
       $scope.selectedStudent = null;
       $scope.singleStudentSelected = false;
