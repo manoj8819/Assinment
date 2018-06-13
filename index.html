@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link data-require="bootstrap-css@3.2.0" data-semver="3.2.0" rel="stylesheet"href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+  <script src="https://code.angularjs.org/1.2.22/angular.js"></script>
+  <script src="https://code.angularjs.org/1.2.20/angular-route.js">
+  </script>
+
+  <script src="app.js"></script>
+</head>
+
+<body ng-app="myApp">
+  <!--Now it Tells to AngularJS to be active in this portion of the page. In this case the entire document.(due to we apply on body tag ) -->
+  <div class="container">
+    <div class="jumbotron">
+      <!-- navigation menu start-->
+      <a href="#home" class="btn btn-primary">Home</a>
+      <a class="btn btn-success" href="#about">About</a>
+      <a class="btn btn-danger" href="#contact">Contact</a>
+      <!-- navigation menu stop-->
+
+      <br/>
+      <br/>
+
+      <!-- by ng-view we create a space in this dynamic content come according to route by ng-view angular know that on which area content will set-->
+      <div ng-view="">
+      </div><br/>
+
+
+    </div>
+  </div>
+</body>
+
+</html>
